@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ShifNoa(シフノア)操作説明書</title>
+<style>
+:root{--ink:#0f172a;--sub:#475569;--line:#cbe2f0;--bg:#eaf5fc;--accent:#0284c7}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.8 "Yu Gothic","Hiragino Sans",Meiryo,sans-serif}
+main{max-width:860px;margin:0 auto;padding:24px 16px 64px}
+h1{font-size:28px;margin:8px 0}
+h2{font-size:21px;border-left:6px solid var(--accent);padding-left:10px;margin:48px 0 12px;break-after:avoid}
+h3{font-size:16px;margin:24px 0 6px;color:#0c4a6e;break-after:avoid}
+.lead{color:var(--sub)}
+nav{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 20px}
+nav ol{margin:0;padding-left:20px}
+.fig{display:flex;gap:20px;align-items:flex-start;margin:12px 0;break-inside:avoid}
+.fig img{width:260px;max-width:45%;border:1px solid var(--line);border-radius:12px;box-shadow:0 2px 8px #0002;flex:none}
+.fig .txt{flex:1}
+@media(max-width:600px){.fig{flex-direction:column}.fig img{max-width:100%;width:300px}}
+table{border-collapse:collapse;background:#fff;margin:8px 0;width:100%}
+th,td{border:1px solid var(--line);padding:6px 10px;text-align:left;vertical-align:top}
+th{background:#dceef8}
+.chip{display:inline-block;min-width:30px;text-align:center;padding:1px 8px;border-radius:6px;font-weight:700;margin-right:4px}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:8px 12px;margin:10px 0}
+.tip{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:8px;padding:8px 12px;margin:10px 0}
+li{margin:3px 0}
+@media print{body{background:#fff}.fig img{box-shadow:none}}
+</style></head><body><main>
+<h1>ShifNoa(シフノア)操作説明書</h1>
+<p class="lead"><b>シフト作成もっとかんたんに。</b>ShifNoa(シフノア)は、看護師の勤務表(シフト)を条件にあわせて自動で作成・調整するアプリです。画面下のタブ(シフト表／スタッフ／分析／設定)で画面を切り替えます。</p>
+<nav><strong>目次</strong><ol>
+<li>はじめに(基本の流れ)</li><li>シフト表画面の見方</li><li>勤務の入力・修正</li><li>希望(休み・勤務)の登録</li>
+<li>スタッフ画面</li><li>設定画面</li><li>分析画面</li><li>出力・履歴・用語集</li></ol></nav>
+
+<h2>1. はじめに(基本の流れ)</h2>
+<ol>
+<li><b>設定</b>タブで病棟・チーム、勤務体制(三交代/二交代)、各勤務の必要人数などを決める。</li>
+<li><b>スタッフ</b>タブで職員の名前・レベル(L1〜L4)・所属チーム・夜勤上限などを登録する。</li>
+<li><b>シフト表</b>タブで、休みなどの<b>希望</b>を登録する。</li>
+<li>「<b>自動生成</b>」ボタンを押すと、条件を満たす勤務表が作られる。</li>
+<li>赤枠・警告を見ながら、セルをタップして手で微調整する。</li>
+<li><b>分析</b>タブで勤務時間や夜勤回数の偏りを確認し、<b>設定</b>の「出力」から CSV(Excel) / PDF に出力する。</li>
+</ol>
+<div class="note">データは端末内に自動保存されます。アプリを閉じても残ります。月は画面上部の ◀ ▶ で切り替えます。</div>
+
+<h2>2. シフト表画面の見方</h2>
+<div class="fig"><img src="images/02_schedule_generated.png" alt="シフト表画面">
+<div class="txt">
+<h3>画面上部</h3>
+<ul>
+<li><b>◀ 2026年10月 ▶</b>:表示する月の切り替え。</li>
+<li><b>自動生成</b>:勤務表を自動作成します。生成中は進み具合が表示されます。</li>
+<li><b>全員 / Aチーム…</b>:チームが複数あるとき、表示する職員を絞り込みます。</li>
+<li><b>希望登録</b>スイッチ:ONにすると、セルのタップが「希望の登録」になります(第4章)。</li>
+<li>ピンクの帯:<b>警告</b>。勤務ルール違反、インターバル不足、NGペア重複、条件未達の日の件数が出ます。</li>
+</ul>
+<h3>表の左側(名前列)</h3>
+<p>「佐藤 L4」=名前とレベル。その下の <span style="color:#16a34a;font-weight:700">176h/160h ・ 夜9</span> は<b>実績時間/所定時間・夜勤回数</b>です。所定から±10%以内は緑、不足は青、超過は赤で表示されます。管理者は「管理」、夜勤禁止の人は「🚫夜」と出ます。</p>
+<h3>表の本体(日付ごとのセル)</h3>
+<ul>
+<li>見出しは日付と曜日。<span style="color:#dc2626">日曜は赤</span>、<span style="color:#2563eb">土曜は青</span>。祝日は「祝」、病棟独自の休日は「休」が付きます。</li>
+<li>灰色の列は<b>前月末/翌月初</b>(閲覧専用)。連勤や勤務間隔の確認用です。</li>
+<li>条件を満たせていない日は見出しが<b>薄い赤</b>になります。見出しを<b>長押し</b>すると理由を確認できます。</li>
+<li>右端の「夜勤・日勤・休み・年休・連休」は個人ごとの月間集計です(連休=休みが2日以上連続した回数)。</li>
+<li>画面を左右にスクロールすると月末まで見られます。名前列は固定されたままです。</li>
+</ul></div></div>
+
+<h3>勤務の種類と色</h3>
+<table>
+<tr><th>表示</th><th>勤務</th><th>時間</th><th>内容</th></tr>
+<tr><td><span class="chip" style="background:#FDE9B8;color:#7A5200">日</span></td><td>日勤</td><td>8h(8–16時)</td><td>通常の日中勤務</td></tr>
+<tr><td><span class="chip" style="background:#CDEFE9;color:#0F5F58">早</span></td><td>早出</td><td>8h(7–15時)</td><td>早い時間帯の日勤</td></tr>
+<tr><td><span class="chip" style="background:#D8EFC6;color:#3B6A1E">遅</span></td><td>遅出</td><td>8h(11–19時)</td><td>遅い時間帯の日勤</td></tr>
+<tr><td><span class="chip" style="background:#BCD6FA;color:#1E4E9A">準</span></td><td>準夜</td><td>8h(16–24時)</td><td>夜勤の前半</td></tr>
+<tr><td><span class="chip" style="background:#FBC8CD;color:#9B1C2C">深</span></td><td>深夜</td><td>8h(0–8時)</td><td>夜勤の後半</td></tr>
+<tr><td><span class="chip" style="background:#FFF4C9;color:#7A5F00">午前</span> <span class="chip" style="background:#FFE2BF;color:#8A4B0A">午後</span></td><td>午前/午後半日</td><td>4h</td><td>半日勤務(手動入力用)</td></tr>
+<tr><td><span class="chip" style="background:#CBD5E1;color:#475569">休</span></td><td>休み</td><td>0h</td><td>公休</td></tr>
+<tr><td><span class="chip" style="background:#E3D9FA;color:#5B3AA8">有</span> <span class="chip" style="background:#EEE8FC;color:#6D50B8">半</span></td><td>有休/半休</td><td>8h/4h</td><td>有給休暇(半休は0.5日)</td></tr>
+</table>
+
+<h3>画面下部:勤務ごとの人数合計</h3>
+<div class="fig"><img src="images/04_schedule_bottom.png" alt="シフト表の下部">
+<div class="txt"><p>表の一番下に、<b>日勤計・早出計・遅出計・準夜計・深夜計</b>が日ごとに表示されます。必要人数に足りているかを一目で確認できます。管理者を含めるかどうかは設定画面で選べます。</p>
+<p>さらに下には勤務の色の凡例と、現在の勤務体制の説明が表示されます。</p>
+<h3>セルの枠の意味</h3>
+<ul><li><b style="color:#dc2626">赤い枠</b>:ルール違反(連続勤務の上限超過、勤務間インターバル不足、NGペア同時、土日祝勤務禁止の違反など)。</li>
+<li><b style="color:#d97706">橙の枠</b>:登録した希望を反映できなかったセル。長押しすると理由が出ます。</li></ul></div></div>
+
+<h2>3. 勤務の入力・修正</h2>
+<ul>
+<li><b>タップ</b>:セルをタップするたびに <b>日勤 → 休み → 有休 → 半休</b> と切り替わります(空欄から始まります)。</li>
+<li><b>長押し</b>:全種類の勤務(日勤・早出・遅出・準夜・深夜・午前/午後半日・休み・有休・半休・クリア)から選べるメニューが開きます。</li>
+<li><b>二交代</b>の場合は、メニューの「夜勤(準夜+深夜+休み・3日ブロック・計16h)」で3日分をまとめて入力します。</li>
+<li>修正すると、赤枠・警告・集計が即座に更新されます。</li>
+</ul>
+<div class="tip">自動生成をやり直すと勤務表は作り直されます。手で直した内容を残したい場合は、先に<b>希望登録</b>として入れておくと、生成時に優先されます。誤って作り直した場合は「設定 → 変更履歴」から戻せます。</div>
+
+<h2>4. 希望(休み・勤務)の登録</h2>
+<div class="fig"><img src="images/05_request_mode.png" alt="希望登録モード">
+<div class="txt">
+<ol>
+<li>「<b>希望登録</b>」スイッチをONにします(緑になります)。</li>
+<li>希望を入れたいセルをタップします。タップのたびに、<b>休 → 日 → 早 → 遅 → 準 → 深 → AM → PM → なし</b>(三交代の場合)と切り替わります。</li>
+<li>セルの右上に小さな丸いマーク(上図の「休」「日」「遅」など)が付きます。これが希望です。</li>
+<li>「自動生成」を押すと、希望が優先して反映されます。</li>
+<li>スイッチをOFFにすると通常の入力に戻ります。</li>
+</ol>
+<p>画面上部に「反映できなかった希望: n件」が出た場合、該当セルが<b style="color:#d97706">橙の枠</b>になっています。長押しすると理由(人数や連勤の制約など)を確認できます。</p>
+</div></div>
+<div class="note">日付の見出しをタップすると、その日を病棟独自の<b>休日(土日祝扱い)</b>として設定・解除できます。国民の祝日は自動で休日扱いになります。</div>
+
+<h2>5. スタッフ画面</h2>
+<div class="fig"><img src="images/20_staff.png" alt="スタッフ画面">
+<div class="txt">
+<p>上部に人数とレベル別の内訳(例:34名 / L4:8 L3:10 L2:10 L1:6)が出ます。「<b>登録順</b>」「<b>レベル別</b>」で並びを切り替えられます。</p>
+<h3>職員カードの項目</h3>
+<ul>
+<li><b>名前</b>:直接入力して変更できます。</li>
+<li><b>L1〜L4</b>:経験レベル(L1 初級 / L2 中堅 / L3 上級 / L4 ベテラン)。</li>
+<li><b>▼</b>:詳細設定を開く。　<b>ゴミ箱</b>:職員を削除。</li>
+<li><b>管理者</b>スイッチ:師長など。レベル・必要人数の対象外で、平日日勤を基本に組みます。</li>
+<li><b>チーム</b>:所属チームを選択。</li>
+<li><b>夜勤上限</b>:月の夜勤回数の上限(0〜5回/上限なし)。準夜+深夜で1回と数えます。</li>
+<li><b>夜勤禁止 / 土日祝勤務禁止</b>:その職員をその勤務に入れません。</li>
+<li><b>必要人数に含めない</b>:新人(L1)など、人数の頭数に数えない職員に使います。</li>
+</ul></div></div>
+<div class="fig"><img src="images/22_staff_expanded.png" alt="詳細設定を開いた職員カード">
+<div class="txt"><h3>詳細設定(▼を押すと開きます)</h3>
+<ul>
+<li><b>早出禁止 / 遅出禁止</b>:その勤務に入れません(本人の希望は優先)。</li>
+<li><b>出勤禁止の曜日</b>:選んだ曜日は出勤させません。</li>
+<li><b>年度内 有休取得日数</b>:アプリ外で取得済みの有休日数。年休の集計に加算されます。</li>
+<li><b>NGペア(日勤系/夜勤系)</b>:同じ勤務に一緒に入れたくない相手を選びます。</li></ul>
+<p>画面最下部の入力欄から、名前・レベル・チームを選んで「<b>＋追加</b>」で新しい職員を登録できます。</p></div></div>
+
+<h2>6. 設定画面</h2>
+<p>設定は上から順に、自動生成の「条件」を決める画面です。下までスクロールして「自動生成」「出力」まで進みます。</p>
+<div class="fig"><img src="images/10_settings_top.png" alt="設定画面の上部">
+<div class="txt">
+<h3>病棟・チーム</h3>
+<ul>
+<li>病棟:丸いボタンで切り替え。「新しい病棟名」＋「＋」で追加、病棟名の欄で名称変更、ゴミ箱で削除(スタッフ・勤務データも消えます)。病棟ごとに職員も設定も別管理です。</li>
+<li>チーム(班分け):名前の変更、追加、削除ができます。削除したチームの職員は別のチームに移動します。</li>
+</ul>
+<h3>日勤の必要レベル人数(チーム別)</h3>
+<p>各チームから日勤に最低何人・どのレベルを入れるかを指定します。<b>0は指定なし</b>。低いレベルが足りなければ高いレベルで補えます(L3不足でもL4がいればOK)。早出・遅出には適用されません。</p></div></div>
+
+<div class="fig"><img src="images/11_settings_levels.png" alt="夜勤の必要レベル人数と勤務体制">
+<div class="txt">
+<h3>夜勤の必要レベル人数</h3>
+<p>「<b>チーム別</b>」か「<b>病棟全体</b>」かを切り替えて、夜勤1回(準夜・深夜それぞれ)に必要なレベル別の最低人数を入れます。</p>
+<h3>月の切り替え</h3>
+<p>設定画面でも ◀ ▶ で対象月を変えられます。</p>
+<h3>勤務体制</h3>
+<ul><li><b>三交代</b>:準夜・深夜を別々に配置。深夜の翌日に準夜・日勤は入りません。</li>
+<li><b>二交代</b>:「準夜(8h)→深夜(8h)→休み」を1セット(16h)で配置。深夜の翌日は自動で休みです。</li></ul></div></div>
+
+<div class="fig"><img src="images/12_settings_mid.png" alt="所定時間と必要人数">
+<div class="txt">
+<h3>所定勤務時間</h3><p>全員共通の月間時間(初期値160h)。自動生成はこの時間に近づくよう配分します。</p>
+<h3>管理者</h3><p>管理者を分析画面と勤務表下部の人数合計に含めるかを選びます(必要人数の判定には含まれません)。</p>
+<h3>各勤務の必要人数(平日 / 土日祝)</h3><p>日勤・夜勤(準夜+深夜)・早出・遅出ごとに、1日に必要な人数を平日と土日祝で別々に設定します。</p></div></div>
+
+<div class="fig"><img src="images/14_settings_bottom.png" alt="その他の条件・自動生成・出力">
+<div class="txt">
+<h3>その他の条件</h3>
+<ul><li><b>連続勤務の上限日数</b>:何連勤まで許すか(初期値5)。</li>
+<li><b>日勤/夜勤のL1上限</b>:1つの勤務に入れるL1の最大人数。</li>
+<li><b>勤務間インターバル(h)</b>:勤務と勤務の間に空ける最低時間(初期値11)。</li>
+<li><b>有休年度開始月</b>:年休集計の年度の始まり(初期値4月)。</li></ul>
+<h3>自動生成の精度</h3>
+<p>「試行回数」(50〜500回)と「改善の試行回数」(初期4000回)。増やすほど精度が上がりますが時間がかかります。条件が厳しいときは増やしてください。</p>
+<h3>自動生成ボタン</h3><p>押すと勤務表を作成し、完了すると「シフト表タブで確認してください」と表示されます。</p>
+<h3>出力 / 変更履歴</h3><p>第8章を参照してください。</p></div></div>
+
+<h2>7. 分析画面</h2>
+<div class="fig"><img src="images/30_analysis.png" alt="分析画面">
+<div class="txt">
+<ul>
+<li><b>所定時間から10%以上ズレているスタッフ</b>:赤い囲みに、超過・不足の時間が大きい順に出ます。</li>
+<li><b>勤務時間</b>:職員ごとの実績時間の棒グラフ。<span style="color:#16a34a">緑=適正(±10%以内)</span>、<span style="color:#2563eb">青=不足</span>、<span style="color:#dc2626">赤=超過</span>。</li>
+<li><b>夜勤回数</b>:職員ごとの回数と上限、所属チーム。上限超過は赤、夜勤禁止はグレー。</li>
+<li><b>土日祝の勤務日数</b>、有休の取得状況なども、下にスクロールして確認できます。</li>
+</ul>
+<p>生成結果が公平かどうか(特定の人に夜勤や休日出勤が偏っていないか)を確かめるのに使います。</p></div></div>
+
+<h2>8. 出力・履歴・用語集</h2>
+<h3>出力(設定画面の下部)</h3>
+<ul><li><b>CSV(Excel)出力</b>:Excelで開ける表形式のファイル。</li><li><b>PDF出力</b>:印刷・共有向けの勤務表。</li></ul>
+<p>どちらも表示中の病棟・月のシフト表が対象です。出力後は共有メニューから保存・送信できます。</p>
+<h3>変更履歴</h3>
+<p>設定画面の最下部「変更履歴」をタップすると、直近の変更の一覧が開きます。「<b>この時点に戻す</b>」で、その時点の勤務表に復元できます(最大20件)。</p>
+<h3>用語集</h3>
+<table>
+<tr><th>用語</th><th>意味</th></tr>
+<tr><td>L1〜L4</td><td>経験レベル。数字が大きいほどベテラン。</td></tr>
+<tr><td>準夜 / 深夜</td><td>夜勤の前半(16–24時) / 後半(0–8時)。</td></tr>
+<tr><td>三交代 / 二交代</td><td>準夜・深夜を別々に組む方式 / 16時間の夜勤を1セットで組む方式。</td></tr>
+<tr><td>勤務間インターバル</td><td>勤務終了から次の勤務開始までに空ける最低時間。</td></tr>
+<tr><td>NGペア</td><td>同じ勤務に入れたくない職員の組み合わせ。</td></tr>
+<tr><td>条件未達の日</td><td>必要人数やレベル条件を満たせていない日。</td></tr>
+<tr><td>管理者</td><td>師長など。必要人数・レベル条件の対象外。</td></tr>
+</table>
+<div class="note">画像は初期状態のサンプルデータ(34名)で自動生成した画面です。サンプルは必要人数が多めなため「条件未達の日」の警告が出ています。実際の人数に合わせて設定を調整すると、警告は減ります。</div>
+</main></body></html>

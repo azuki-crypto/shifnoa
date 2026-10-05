@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ShifNoa サポート</title>
+<meta name="description" content="看護師向けシフト作成アプリ ShifNoa(シフノア)のサポートページ。使い方、よくある質問、お問い合わせ。">
+<style>
+:root{--bg:#eaf5fc;--card:#fff;--ink:#0f172a;--sub:#475569;--line:#cbe2f0;--accent:#0284c7;--accent-ink:#fff}
+@media(prefers-color-scheme:dark){:root{--bg:#0b1620;--card:#12212e;--ink:#e6eef5;--sub:#9fb3c4;--line:#243b4e;--accent:#38a9e0;--accent-ink:#04202f}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 "Yu Gothic","Hiragino Sans",Meiryo,sans-serif}
+header{background:var(--accent);color:var(--accent-ink);padding:40px 16px}
+header div,main{max-width:820px;margin:0 auto}
+header h1{margin:0;font-size:28px}
+header p{margin:6px 0 0;opacity:.92}
+main{padding:16px 16px 64px}
+section{margin-top:36px}
+h2{font-size:21px;margin:0 0 12px;border-left:6px solid var(--accent);padding-left:10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 20px}
+.links{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.links a{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;color:var(--ink);text-decoration:none}
+.links a:hover{border-color:var(--accent)}
+.links b{display:block;color:var(--accent)}
+.links span{font-size:14px;color:var(--sub)}
+a{color:var(--accent)}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0}
+.steps li{counter-increment:s;padding:8px 0 8px 44px;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:0;top:8px;width:30px;height:30px;border-radius:50%;background:var(--accent);color:var(--accent-ink);text-align:center;line-height:30px;font-weight:700}
+.shots{display:flex;gap:12px;overflow-x:auto;padding:4px 0 8px}
+.shots img{height:360px;border:1px solid var(--line);border-radius:12px;flex:none}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:8px 0;padding:0 18px}
+summary{cursor:pointer;font-weight:700;padding:12px 0}
+details p{margin:0 0 14px;color:var(--sub)}
+.todo{background:#fffbeb;color:#92400e;border:1px dashed #d97706;border-radius:6px;padding:0 6px}
+footer{text-align:center;color:var(--sub);font-size:14px;padding:24px 16px}
+</style></head><body>
+<header><div>
+<h1>ShifNoa(シフノア) サポート</h1>
+<p>シフト作成もっとかんたんに</p>
+</div></header>
+<main>
+
+<section class="links">
+<a href="manual.html"><b>操作説明書</b><span>画面の見方から設定まで、画像つきで解説</span></a>
+<a href="manual.pdf"><b>説明書 PDF</b><span>印刷・保存用</span></a>
+<a href="#faq"><b>よくある質問</b><span>困ったときはまずこちら</span></a>
+<a href="privacy.html"><b>プライバシーポリシー</b><span>データの取り扱いについて</span></a>
+<a href="#contact"><b>お問い合わせ</b><span>解決しない場合はご連絡ください</span></a>
+</section>
+
+<section>
+<h2>はじめかた(5ステップ)</h2>
+<div class="card"><ol class="steps">
+<li><b>設定</b>タブで、病棟・チーム、勤務体制(三交代/二交代)、各勤務の必要人数を決めます。</li>
+<li><b>スタッフ</b>タブで、職員の名前・レベル(L1〜L4)・チーム・夜勤上限を登録します。</li>
+<li><b>シフト表</b>タブで「希望登録」をONにして、休みなどの希望を入れます。</li>
+<li>「<b>自動生成</b>」を押すと、条件を満たす勤務表が作られます。</li>
+<li>赤枠や警告を見ながらセルをタップして微調整し、設定画面から CSV / PDF に出力します。</li>
+</ol></div>
+<div class="shots" style="margin-top:12px">
+<img src="images/02_schedule_generated.png" alt="シフト表画面" loading="lazy">
+<img src="images/05_request_mode.png" alt="希望登録" loading="lazy">
+<img src="images/20_staff.png" alt="スタッフ画面" loading="lazy">
+<img src="images/14_settings_bottom.png" alt="設定画面" loading="lazy">
+<img src="images/30_analysis.png" alt="分析画面" loading="lazy">
+</div>
+</section>
+
+<section id="faq">
+<h2>よくある質問</h2>
+
+<details><summary>「条件未達の日」と表示されます</summary>
+<p>必要人数やレベル条件を満たせていない日があるという意味です。日付の見出しを長押しすると理由が表示されます。職員数に対して必要人数が多すぎないか、レベル別の必要人数(設定画面)が厳しすぎないかを確認し、設定画面で「自動生成の精度」(試行回数・改善の試行回数)を増やしてから再度生成してください。</p></details>
+
+<details><summary>セルに赤い枠が付いています</summary>
+<p>ルール違反です。連続勤務の上限超過、勤務間インターバル不足、NGペアの同時勤務、土日祝勤務禁止の違反などが対象です。セルをタップして勤務を変更すると、その場で警告が更新されます。</p></details>
+
+<details><summary>登録した希望が反映されません</summary>
+<p>人数や連続勤務などの制約で反映できない場合、そのセルが橙色の枠になり、画面上部に「反映できなかった希望」の件数が出ます。セルを長押しすると理由が確認できます。</p></details>
+
+<details><summary>セルの入力方法を教えてください</summary>
+<p>タップで「日勤→休み→有休→半休」と切り替わります。長押しすると、早出・遅出・準夜・深夜・半日勤務などすべての勤務から選べます。二交代の夜勤は、長押しメニューから3日ブロック(準夜+深夜+休み)で入力します。</p></details>
+
+<details><summary>自動生成をやり直したら、手で直した内容が消えました</summary>
+<p>自動生成は勤務表を作り直します。残したい内容は「希望登録」で入れておくと優先されます。元に戻したいときは、設定画面の最下部「変更履歴」から「この時点に戻す」を選んでください(直近20件まで)。</p></details>
+
+<details><summary>管理者(師長など)はどう設定しますか</summary>
+<p>スタッフ画面で、その職員の「管理者」スイッチをONにします。管理者はレベル・必要人数の対象外で、平日の日勤を基本に組まれます。分析画面などの集計に含めるかは、設定画面の「管理者」で選べます。</p></details>
+
+<details><summary>特定の人同士を同じ勤務にしたくない</summary>
+<p>スタッフ画面で職員カードの「▼」を開き、「NGペア」から相手を選びます。日勤系と夜勤系を別々に指定できます。</p></details>
+
+<details><summary>夜勤の回数に上限を付けたい</summary>
+<p>スタッフ画面の「夜勤上限」で、月0〜5回または「上限なし」を選びます。準夜+深夜で1回と数えます。夜勤自体をさせない場合は「夜勤禁止」をONにします。</p></details>
+
+<details><summary>勤務表をExcelや紙で使いたい</summary>
+<p>設定画面の「出力」から「CSV(Excel)出力」または「PDF出力」を選びます。表示中の病棟・月の勤務表が出力されます。</p></details>
+
+<details><summary>病棟が複数あります</summary>
+<p>設定画面の「病棟・チーム」で病棟を追加できます。病棟ごとに職員、設定、勤務表が別々に保存され、丸いボタンで切り替えます。病棟を削除すると、その病棟のデータもすべて削除されます。</p></details>
+
+<details><summary>データはどこに保存されますか</summary>
+<p>入力した職員・設定・勤務表のデータは、お使いの端末内に保存されます。アプリを削除すると消えるため、必要な勤務表は CSV / PDF で出力して保管してください。</p></details>
+</section>
+
+<section id="contact">
+<h2>お問い合わせ</h2>
+<div class="card">
+<p style="margin-top:0">上記で解決しない場合は、次の内容を添えてご連絡ください。</p>
+<ul>
+<li>お使いの端末とOSのバージョン</li>
+<li>困っている画面と、操作の手順</li>
+<li>可能であれば画面のスクリーンショット</li>
+</ul>
+<p style="margin-bottom:0">メール: <a href="mailto:shifnoa.support@gmail.com">shifnoa.support@gmail.com</a></p>
+</div>
+</section>
+
+</main>
+<footer><a href="privacy.html">プライバシーポリシー</a><br>© ShifNoa</footer>
+</body></html>
