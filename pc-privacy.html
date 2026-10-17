@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ShifNoa Windows版 プライバシーポリシー</title>
+<style>
+:root{--bg:#eaf5fc;--card:#fff;--ink:#0f172a;--sub:#475569;--line:#cbe2f0;--accent:#0284c7}
+@media(prefers-color-scheme:dark){:root{--bg:#0b1620;--card:#12212e;--ink:#e6eef5;--sub:#9fb3c4;--line:#243b4e;--accent:#38a9e0}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.9 "Yu Gothic","Hiragino Sans",Meiryo,sans-serif}
+main{max-width:760px;margin:0 auto;padding:24px 16px 64px}
+h1{font-size:26px;margin:8px 0}
+h2{font-size:18px;margin:32px 0 6px;border-left:6px solid var(--accent);padding-left:10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px 22px 18px}
+a{color:var(--accent)}
+.meta{color:var(--sub);font-size:14px}
+.todo{background:#fffbeb;color:#92400e;border:1px dashed #d97706;border-radius:6px;padding:0 6px}
+</style></head><body><main>
+<p><a href="pc.html">← Windows版のページ</a></p>
+<h1>プライバシーポリシー (Windows版)</h1>
+<p class="meta">ShifNoa(シフノア) Windows版 / 制定日: 2026年10月17日</p>
+<div class="card">
+
+<p>ShifNoa Windows版(以下「本ソフト」)の提供者であるシフトノア(以下「提供者」)は、情報の取り扱いについて、以下のとおり定めます。iPhone / iPad 版には、別の<a href="privacy.html">プライバシーポリシー</a>があります。</p>
+
+<h2>1. 基本の考え方</h2>
+<p><b>職員の名前や勤務表などのデータは、提供者のサーバーにも、第三者にも送られません。お使いのパソコンの中だけに保存されます。</b>本ソフトには、会員登録・ログイン機能、広告、アクセス解析はありません。</p>
+
+<h2>2. パソコンの中に保存されるデータ</h2>
+<p>ユーザーが入力した次のデータは、お使いのパソコンの中にのみ保存されます。提供者は閲覧できません。</p>
+<ul>
+<li>病棟名・チーム名・職員の名前、レベル、所属チーム、勤務に関する設定</li>
+<li>勤務表、希望の登録内容、変更履歴</li>
+<li>必要人数などの各種設定値</li>
+</ul>
+<p>データは、本ソフトをアンインストールしても残ります。完全に消したいときは、サポートページの案内に従って、データのフォルダを削除してください。パソコンの故障などに備え、バックアップ機能(任意でパスワードによる暗号化ができます)や、CSV / Excel / PDF の出力を使って、保管してください。</p>
+
+<h2>3. 本ソフトが通信する相手と、送られる情報</h2>
+<p>本ソフトが通信するのは、次の2つだけです。それ以外への通信は、本ソフトの内部で遮断しています。</p>
+<ul>
+<li><b>ライセンスの確認(提供者のサーバー。Cloudflare 上で運用)</b>: 1日に1回程度、ライセンスキー(または施設コード)を送ります。サーバーは、キーそのものではなくその変換値(ハッシュ)、利用状況(有効・無効)、有効期限、Stripe の契約を識別する番号を保存します。施設コードに付ける施設のルール(必要人数や勤務の条件などの設定)も保存しますが、職員名や勤務表などは含みません。</li>
+<li><b>新しい版の確認(GitHub)</b>: 起動時と6時間ごとに、新しい版があるかを確認します。職員名や勤務表などは送りません。</li>
+</ul>
+<p>どちらの通信でも、通信の仕組み上、お使いの回線の IP アドレスなどが、相手のサービスに届きます。提供者は、これを利用者の特定やアクセス解析には使いません。Cloudflare と GitHub は、それぞれのサービスの運営のために、通信の記録を保存することがあります。</p>
+
+<h2>4. お申し込みとお支払い(Stripe)</h2>
+<p>お申し込みとお支払いは、決済サービス Stripe の画面で行います。Stripe には、メールアドレス・お名前・ご住所、(お支払い方法を登録する場合は)カード情報を入力いただきます。カード情報は Stripe が取り扱い、提供者は受け取りません。メールアドレス・お名前・ご住所は、契約の管理・請求書の発行・お問い合わせへの対応のために、Stripe を通じて提供者が確認できる場合があります。これらは、その目的以外には使いません。Stripe での取り扱いは、<a href="https://stripe.com/jp/privacy">Stripe のプライバシーポリシー</a>に従います。</p>
+
+<h2>5. お問い合わせ</h2>
+<p>お問い合わせの際にいただいた情報は、返信と対応のためだけに使います。お問い合わせには、職員の氏名や勤務表の内容を書かないでください。</p>
+
+<h2>6. 勤務表の出力</h2>
+<p>「CSV / Excel / PDF の出力」やバックアップを行うと、ファイルがユーザーの選んだ場所に保存されます。保存したファイルを、メールやクラウドストレージなどに送るかどうかは、ユーザーご自身で決めます。送信先での取り扱いは、各サービスの規約に従います。</p>
+
+<h2>7. 個人情報の取り扱いについてのお願い</h2>
+<p>本ソフトには職員の氏名が入力されます。職場の規程に沿って、氏名を略称や記号にする、出力したファイルを適切に管理するなど、ご注意のうえでご利用ください。</p>
+
+<h2>8. 第三者への提供</h2>
+<p>提供者は、法令に基づく場合を除き、ユーザーの情報を第三者に提供しません。上の3・4で書いた各サービス(Cloudflare・GitHub・Stripe)は、本ソフトの提供に必要な範囲で利用しています。</p>
+
+<h2>9. ポリシーの変更</h2>
+<p>本ポリシーは、必要に応じて改定することがあります。重要な変更は、このページに掲載してお知らせします。</p>
+
+<h2>10. お問い合わせ</h2>
+<p><a href="mailto:shifnoa.support@gmail.com">shifnoa.support@gmail.com</a></p>
+</div>
+</main></body></html>
