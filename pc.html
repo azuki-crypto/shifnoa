@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ShifNoa Windows版 サポート</title>
+<meta name="description" content="看護師向けシフト作成アプリ ShifNoa(シフノア)Windows版のサポートページ。ダウンロード、はじめかた、ライセンス、よくある質問、お問い合わせ。">
+<style>
+:root{--bg:#eaf5fc;--card:#fff;--ink:#0f172a;--sub:#475569;--line:#cbe2f0;--accent:#0284c7;--accent-ink:#fff;--warn-bg:#fffbeb;--warn-ink:#92400e;--warn-line:#d97706}
+@media(prefers-color-scheme:dark){:root{--bg:#0b1620;--card:#12212e;--ink:#e6eef5;--sub:#9fb3c4;--line:#243b4e;--accent:#38a9e0;--accent-ink:#04202f;--warn-bg:#2b2410;--warn-ink:#f5d08a;--warn-line:#a16207}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 "Yu Gothic","Hiragino Sans",Meiryo,sans-serif}
+header{background:var(--accent);color:var(--accent-ink);padding:40px 16px}
+header div,main{max-width:900px;margin:0 auto}
+header h1{margin:0;font-size:28px}
+header p{margin:6px 0 0;opacity:.92}
+main{padding:16px 16px 64px}
+section{margin-top:36px}
+h2{font-size:21px;margin:0 0 12px;border-left:6px solid var(--accent);padding-left:10px}
+h3{font-size:17px;margin:20px 0 4px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 20px}
+.card p:first-child{margin-top:0}.card p:last-child{margin-bottom:0}
+.links{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.links a{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;color:var(--ink);text-decoration:none}
+.links a:hover{border-color:var(--accent)}
+.links b{display:block;color:var(--accent)}
+.links span{font-size:14px;color:var(--sub)}
+a{color:var(--accent)}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);font-weight:700;text-decoration:none;border-radius:10px;padding:12px 22px}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0}
+.steps li{counter-increment:s;padding:8px 0 8px 44px;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:0;top:8px;width:30px;height:30px;border-radius:50%;background:var(--accent);color:var(--accent-ink);text-align:center;line-height:30px;font-weight:700}
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.feat .card h3{margin:0 0 4px;font-size:16px;color:var(--accent)}
+.feat .card p{margin:0;font-size:15px;color:var(--sub)}
+figure{margin:16px 0 0}
+figure img{width:100%;height:auto;border:1px solid var(--line);border-radius:10px;display:block}
+figcaption{font-size:14px;color:var(--sub);margin-top:6px}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:8px 0;padding:0 18px}
+summary{cursor:pointer;font-weight:700;padding:12px 0}
+details p,details ul{margin:0 0 14px;color:var(--sub)}
+details ul{padding-left:1.3em}
+.note{background:var(--warn-bg);color:var(--warn-ink);border:1px solid var(--warn-line);border-radius:10px;padding:10px 16px;margin:12px 0}
+.note b{color:inherit}
+kbd{background:var(--bg);border:1px solid var(--line);border-radius:5px;padding:0 6px;font-size:.9em}
+footer{text-align:center;color:var(--sub);font-size:14px;padding:24px 16px}
+</style></head><body>
+<header><div>
+<h1>ShifNoa(シフノア) Windows版 サポート</h1>
+<p>パソコンで、シフト作成もっとかんたんに</p>
+</div></header>
+<main>
+
+<p class="card" style="margin-top:16px">iPhone / iPad 版をお使いの方は、<a href="support.html">iOS版のサポートページ</a>をご覧ください。このページは、パソコン(Windows)にインストールして使う版の案内です。</p>
+
+<section class="links">
+<a href="#download"><b>ダウンロード・インストール</b><span>入手の手順と、最初に出る警告について</span></a>
+<a href="#license"><b>料金とライセンス</b><span>3か月無料・キーの入力・解約</span></a>
+<a href="#start"><b>はじめかた</b><span>最初の勤務表ができるまで</span></a>
+<a href="#features"><b>Windows版の機能</b><span>時短・パート、代行、研修ほか</span></a>
+<a href="#faq"><b>よくある質問</b><span>困ったときはまずこちら</span></a>
+<a href="#contact"><b>お問い合わせ</b><span>解決しない場合はご連絡ください</span></a>
+</section>
+
+<section id="download">
+<h2>ダウンロード・インストール</h2>
+<div class="card">
+<p><a class="btn" href="https://github.com/azuki-crypto/shifnoa/releases/latest">最新版をダウンロード</a></p>
+<p>開いたページの「Assets」にある <b>ShifNoa-Setup-○.○.○.exe</b> をダウンロードして、ダブルクリックしてください。質問は出ず、そのままインストールが終わります。</p>
+<ul>
+<li><b>動作環境:</b> Windows 10 / 11(64ビット)</li>
+<li><b>管理者権限は不要です。</b>お使いのユーザーだけにインストールされ、デスクトップとスタートメニューにアイコンができます。</li>
+<li><b>ブラウザではなく、専用のアプリとして動きます。</b>職員名や勤務表は、このパソコンの中だけに保存されます。</li>
+<li><b>アップデート:</b> 起動時と、起動中は6時間ごとに新しい版があるかを確認します。見つかると自動でダウンロードされ、「今すぐ再起動 / 後で」をお聞きします。</li>
+</ul>
+<div class="note"><b>初回に「WindowsによってPCが保護されました」と表示されることがあります。</b>これは、アプリに電子署名(有料の証明書)をまだ付けていないためで、ウイルスが見つかったという意味ではありません。「<b>詳細情報</b>」→「<b>実行</b>」を押すと、インストールが進みます。病院のパソコンなど、管理者が実行を制限している場合は、情報システムの担当の方にご相談ください。</div>
+<p>アンインストールは、Windowsの「設定」→「アプリ」から行えます。<b>アンインストールしても、職員・勤務表のデータは消えません</b>(入れ直せばそのまま使えます)。データも完全に消したいときは、アンインストールのあとで、エクスプローラーのアドレス欄に <kbd>%APPDATA%\ShifNoa</kbd> と入力して開き、そのフォルダを削除してください(削除すると元に戻せません。必要なデータは、先にバックアップしてください)。</p>
+</div>
+</section>
+
+<section id="license">
+<h2>料金とライセンス</h2>
+<div class="card">
+<p><b>月額550円(税込)。最初の3か月間は無料です。</b>無料期間は、<b>カードの登録なしで</b>始められます。無料期間が終わるまでにお支払い方法を登録しなかった場合は、自動的にご利用が停止し、料金はかかりません。</p>
+<h3>お申し込みから使い始めるまで</h3>
+<ol class="steps">
+<li>アプリの<b>設定</b>タブ →「月額プラン・ライセンス」の「<b>3か月無料で始める</b>」を押します。ブラウザで決済のページ(Stripe)が開きます。</li>
+<li>案内に沿ってお申し込みを済ませると(決済画面では、メールアドレス・お名前・ご住所の入力が必要です。無料期間中はカード情報の入力は不要です)、完了のページに<b>ライセンスキー</b>(例: SN-XXXX-XXXX-XXXX-XXXX-XXXX)が表示されます。</li>
+<li>アプリの「ライセンスキー・施設コードをお持ちの方」の欄にキーを入力して「登録」を押すと、自動生成が使えるようになります。</li>
+</ol>
+<ul>
+<li><b>キーは必ずメモ(コピー)してください。</b>無料期間中は請求書が届かないため、完了のページを閉じる前に控えておくのが確実です。有料になったあとは、Stripe から届く請求書・領収書にも記載されます。</li>
+<li><b>解約・お支払い方法の変更:</b> アプリの「解約・お支払い方法の変更」から、Stripe のページが開きます。いつでも手続きできます。</li>
+<li><b>お支払い情報の扱い:</b> カード情報やメールアドレスは、決済サービス(Stripe)だけが取り扱います。ShifNoa のサーバーには保存されません。</li>
+</ul>
+<h3>ライセンスの確認について</h3>
+<p>アプリは、<b>1日に1回程度</b>、ライセンスキーだけをサーバーに送って、有効かどうかを確認します。<b>職員名や勤務表などのデータは送りません。</b>インターネットに接続できない間も、<b>14日間</b>はそのまま使えます。</p>
+<h3>施設(病院・事業所)でのご利用</h3>
+<p>個人のライセンスキーとは別に、<b>施設コード</b>があります。施設コードを入力した方は、個人の課金なしで使えます。施設コードには、その施設のルール(必要人数や勤務の条件などの設定)を付けることができ、入力すると、内容を確認したうえで設定に読み込めます(職員名・勤務表は含まれません)。料金や契約期間は施設ごとに決めます。ご希望の施設の方は、<a href="#contact">お問い合わせ</a>ください。</p>
+</div>
+</section>
+
+<section id="start">
+<h2>はじめかた(7ステップ)</h2>
+<div class="card"><ol class="steps">
+<li><b>インストール</b>して起動し、ライセンスキー(または施設コード)を登録します。</li>
+<li><b>設定</b>タブで、病棟・チーム、勤務体制(三交代/二交代)、各勤務の必要人数を決めます。</li>
+<li><b>スタッフ</b>タブで、職員の名前・レベル(L1〜L4)・チーム・夜勤上限などを登録します。画面左の「スタッフ一覧」から名前を選ぶと、その人の設定へすぐ移動できます。</li>
+<li>時短・パート、管理者代行、新人とコーチなど、必要な職員は<b>スタッフ</b>タブで設定します。研修や委員会の日程は、<b>設定</b>タブの「予定」に登録します。</li>
+<li><b>シフト表</b>タブで「希望登録」をONにして、休みなどの希望を入れます(マスを右クリックすると、種類を選べます)。</li>
+<li>「<b>自動生成</b>」を押すと、条件を満たす勤務表が作られます。</li>
+<li>赤枠や警告を見ながら、マスを<b>クリック</b>または<b>右クリック</b>して微調整し、設定画面から <b>Excel / PDF</b> に出力します。データは<b>バックアップ</b>も取っておくと安心です。</li>
+</ol></div>
+<figure><img src="images/pc/pc-schedule.jpg" alt="シフト表画面" loading="lazy"><figcaption>シフト表。1か月分と集計が、横にスクロールしなくても1画面に収まります。</figcaption></figure>
+
+<h3>マスの操作</h3>
+<div class="card">
+<ul style="margin:0;padding-left:1.3em">
+<li><b>クリック:</b> 「日勤→休み→有休→半休」と切り替わります(希望登録中は、希望が切り替わります)。</li>
+<li><b>右クリック:</b> メニューが開き、早出・遅出・準夜・深夜・半日勤務・研修・特別休暇・リリーフなど、すべての勤務から選べます。メニューは <kbd>Esc</kbd> キーか、外側のクリックで閉じます。</li>
+<li><b>日付の見出しを右クリック:</b> その日の警告(人数不足など)の理由が表示されます。</li>
+</ul>
+</div>
+<figure><img src="images/pc/pc-rightclick.jpg" alt="右クリックのメニュー" loading="lazy"><figcaption>右クリックのメニュー。勤務を選ぶほか、「急な休み・代わりを探す」も使えます。</figcaption></figure>
+</section>
+
+<section id="features">
+<h2>Windows版の機能</h2>
+<div class="feat">
+<div class="card"><h3>時短・パート</h3><p>職員ごとに、勤務形態(常勤/時短/パート)と1日の勤務時間を設定。パートは「週の日数」「曜日固定」「月の時間」から選べます。日勤の必要人数に数えるかも選べます。</p></div>
+<div class="card"><h3>研修・委員会</h3><p>日付を指定するほか、「毎月第3木曜日」「毎週」のような繰り返しも登録できます。研修は終日・午前・午後に対応(半日は残りを病棟で勤務)。本人の希望と重なった日は希望を優先して知らせます。</p></div>
+<div class="card"><h3>夏季休暇・特別休暇</h3><p>勤務時間に数える休暇です(有休と同じ扱い)。慶弔などにお使いください。</p></div>
+<div class="card"><h3>新人とコーチ・プリセプター</h3><p>新人が夜勤に入る日は、コーチ・プリセプターもできるだけ同じ夜勤になるよう組みます(努力目標)。そろわなかった日は一覧で確認できます。</p></div>
+<div class="card"><h3>管理者代行</h3><p>主任などを代行に設定すると、管理者が日勤にいない日に、代行が1人入るように組みます。平日・土曜(半日も可)・日曜・祝日ごとに、代行が必要かを決められます。</p></div>
+<div class="card"><h3>チームリーダー</h3><p>リーダー役を決めると、日勤は各チームに1人以上のリーダーが入るように組み、務める人の回数もそろえます。シフト表には「TL」の印が付きます。</p></div>
+<div class="card"><h3>急な休みの代わりを探す</h3><p>マスを右クリックして「急な休み・代わりを探す」を選ぶと、自動生成と同じ基準で、代わりに入れる人を良い順に提案します。勤務時間をそろえる案や、起きる問題(連続勤務・インターバルなど)も表示します。</p></div>
+<div class="card"><h3>リリーフ</h3><p>他の病棟から応援に来てもらう人数を、日ごと・勤務ごとに入力できます(表の下の「応援」の行)。自分の病棟の職員が他の病棟へ応援に行く日は「リリーフ(他病棟へ)」を入れると、勤務時間に数え、病棟の人数には数えません。</p></div>
+<div class="card"><h3>Excel・PDFの出力</h3><p>色・罫線つきの Excel(.xlsx)と PDF に、A4横1枚で出力できます。チームごとの並び、個人ごとの集計、日ごとの人数、凡例が入ります。</p></div>
+<div class="card"><h3>バックアップ</h3><p>全病棟のデータをファイルに書き出し・読み込みできます。パスワードでの暗号化は任意です。別のパソコンへのお引っ越しにも使えます。</p></div>
+</div>
+<figure><img src="images/pc/pc-staff.jpg" alt="スタッフ画面" loading="lazy"><figcaption>スタッフ画面。左のチーム別の一覧から名前を選ぶと、その人の設定へ移動します(図は「時短」を設定した例)。</figcaption></figure>
+<figure><img src="images/pc/pc-substitute.jpg" alt="代わりの候補" loading="lazy"><figcaption>急な休みの代わりの候補。良い順に並び、押すとそのまま反映されます(元に戻すこともできます)。</figcaption></figure>
+<figure><img src="images/pc/pc-settings.jpg" alt="設定画面" loading="lazy"><figcaption>設定画面。管理者代行が必要な日、チームリーダー、研修・委員会の予定などを設定します。</figcaption></figure>
+</section>
+
+<section id="faq">
+<h2>よくある質問</h2>
+
+<details><summary>インストールしようとすると警告が出て進めません</summary>
+<p>「WindowsによってPCが保護されました」の画面では、「詳細情報」を押すと「実行」のボタンが出ます。ボタンが出ない場合は、パソコンの管理者(病院の情報システムなど)が、署名のないアプリの実行を禁止している可能性があります。ダウンロードしたファイルを右クリック →「プロパティ」→「ブロックの解除」にチェックを入れてから、もう一度お試しください。</p></details>
+
+<details><summary>「自動生成」のボタンが押せません</summary>
+<p>ライセンスキー(または施設コード)が登録されていないか、有効でなくなっています。設定タブの「月額プラン・ライセンス」の表示を確認してください。解約した場合や、無料期間が終わってお支払い方法が登録されていない場合は、自動生成だけが使えなくなります。<b>すでにある勤務表の閲覧・手入力・出力・バックアップは、引き続き使えます。</b></p></details>
+
+<details><summary>「このコードは使えません」と表示されます</summary>
+<p>キーの入力間違いがないか確認してください(英字の「O」と数字の「0」、英字の「I」「L」と数字の「1」は、同じ文字として扱います)。キーはコピーして貼り付けると確実です。それでも使えない場合は、解約によって無効になっている可能性があります。Stripe から届いた請求書の内容もご確認ください。</p></details>
+
+<details><summary>インターネットにつながっていなくても使えますか</summary>
+<p>はい。勤務表の作成や編集は、インターネットなしで使えます。ライセンスの確認だけ、1日に1回程度つながる必要がありますが、つながらない間も<b>14日間</b>は使えます。14日を過ぎると、インターネットに接続して確認できるまで、自動生成が使えなくなります。</p></details>
+
+<details><summary>画面に「パソコンの日付が確認時より前になっています」と出ます</summary>
+<p>パソコンの日付を戻して使い続けることを防ぐための表示です。日付と時刻が正しいか確認し、インターネットに接続して「今すぐ確認する」を押してください。</p></details>
+
+<details><summary>データはどこに保存されますか。別のパソコンに移せますか</summary>
+<p>職員・設定・勤務表は、このパソコンの中のアプリ専用の保管場所だけに保存され、外部には送られません。パソコンの故障や買い替えに備えて、設定画面の「バックアップ」から、定期的にファイルに書き出してください。別のパソコンでは、アプリをインストールして、そのファイルを「バックアップから読み込む」で読み込むと、同じ状態に戻せます。</p></details>
+
+<details><summary>バックアップのパスワードを忘れました</summary>
+<p>パスワードで暗号化したバックアップは、パスワードがないと開けません(ShifNoa 側でも解除できません)。パスワードは、バックアップとは別の場所に控えておいてください。</p></details>
+
+<details><summary>アプリが通信する相手を知りたい</summary>
+<p>アプリが通信するのは、次の2つだけです。(1) ライセンスの確認(ライセンスキーのみを送ります)、(2) アプリの新しい版の確認(GitHub)。職員名・勤務表などのデータは、どこにも送りません。お申し込みと解約のページは、お使いのブラウザで開きます。</p></details>
+
+<details><summary>研修や委員会の日程はどう入れますか</summary>
+<p>設定タブの「予定(研修・委員会)」で「予定を追加」を押します。種類(研修/委員会)、日付の決め方(日付を指定・毎月第N曜日・毎週)、参加する職員を選びます。登録した予定は、次の「自動生成」から反映されます。1回だけ個別に入れたい場合は、マスを右クリックして「研修」などを選ぶこともできます。</p></details>
+
+<details><summary>時短・パートの人は、日勤の人数に数えますか</summary>
+<p>スタッフ画面の「日勤の必要人数に数える」で、人ごとに選べます。数えない設定にすると、その人は必要人数に含まれず、人数を満たすための勤務としては組まれません。</p></details>
+
+<details><summary>管理者代行は、どんなときに入りますか</summary>
+<p>設定タブの「管理者代行が必要な日」で、平日(管理者が休みの日)・土曜・日曜・祝日ごとに、代行が必要かどうかを決めます。初期設定は「平日の管理者が休みの日だけ」です。土曜は「半日」にすると、日勤のほか、半日勤務の人が入っても代行とみなします。必要な日に代行が入れなかったときは、その日が警告の対象になります。</p></details>
+
+<details><summary>「新人と指導者の夜勤が違う日」と出ます</summary>
+<p>新人が夜勤の日に、コーチ・プリセプターを同じ夜勤にできなかった日です。必要人数・勤務時間・夜勤回数のバランスなどを優先するため、そろわない日が出ることがあります(努力目標です)。押すと、その日の一覧が表示されます。</p></details>
+
+<details><summary>急な休みが出たとき、代わりの人はどう探しますか</summary>
+<p>休むことになった人の勤務のマスを右クリックして「急な休み・代わりを探す…」を選び、休みの種類(休み・有休・特別休暇)を選びます。代わりに入れる人が良い順に表示されるので、頼みたい人を押すと、その場で反映されます。反映後は、設定画面の「変更履歴」から元に戻せます。</p></details>
+
+<details><summary>「条件未達の日」や赤い枠が出ます</summary>
+<p>必要人数やレベル条件を満たせていない日、またはルール違反(連続勤務の上限超過、勤務間インターバル不足、NGペアの同時勤務など)があるという意味です。日付の見出しを右クリックすると理由が表示されます。職員数に対して必要人数が多すぎないか確認し、設定画面で「自動生成の精度」を増やしてから、もう一度生成してください。</p></details>
+
+<details><summary>自動生成をやり直したら、手で直した内容が消えました</summary>
+<p>自動生成は勤務表を作り直します。残したい内容は、「希望登録」で入れておくと優先されます。元に戻したいときは、設定画面の最下部「変更履歴」から、元に戻したい時点を選んでください。</p></details>
+
+<details><summary>iPhone / iPad の ShifNoa とデータを共有できますか</summary>
+<p>いいえ。iOS 版とは別のアプリで、データは共有されません(iOS 版のデータもそれぞれの端末の中だけにあります)。iOS 版と Windows 版の月額プランも別々です。</p></details>
+</section>
+
+<section id="contact">
+<h2>お問い合わせ</h2>
+<div class="card">
+<p>上記で解決しない場合は、次の内容を添えてご連絡ください。</p>
+<ul>
+<li>Windows のバージョン(10 / 11)と、インストーラーのファイル名(ShifNoa-Setup-○.○.○.exe の数字)</li>
+<li>困っている画面と、操作の手順</li>
+<li>可能であれば画面のスクリーンショット</li>
+</ul>
+<p><b>職員の名前など、個人が分かる情報は、メールに書かないでください。</b>スクリーンショットを送るときも、名前の部分を隠してください。</p>
+<p>メール: <a href="mailto:shifnoa.support@gmail.com">shifnoa.support@gmail.com</a></p>
+</div>
+</section>
+
+</main>
+<footer><a href="terms.html">利用規約</a> ・ <a href="privacy.html">プライバシーポリシー</a> ・ <a href="tokushoho.html">特定商取引法に基づく表記</a><br><a href="support.html">iPhone / iPad 版のサポート</a><br>© ShifNoa</footer>
+</body></html>
